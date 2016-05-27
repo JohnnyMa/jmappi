@@ -1,5 +1,5 @@
 <ion-view view-title="Audit">
-  <ion-content ng-controller="AuditCtrl">
+  <ion-content>
     <ion-header-bar class="bar-positive">
       <div class="buttons">
         <button class="button button-icon icon ion-ios-minus-outline"
@@ -17,7 +17,7 @@
 
       <!-- The list directive is great, but be sure to also checkout the collection repeat directive when scrolling through large lists -->
       
-      <ion-list show-delete="data.showDelete" show-reorder="data.showReorder">
+      <ion-list ng-controller="AuditCtrl" show-delete="data.showDelete" show-reorder="data.showReorder">
 
         <ion-item ng-repeat="item in items" 
                   item="item"
