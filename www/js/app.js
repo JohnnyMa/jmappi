@@ -50,30 +50,40 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
-  .state('tab.chats', {
-      url: '/chats',
+  .state('tab.alert', {
+      url: '/alert',
       views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
+        'tab-alert': {
+          templateUrl: 'templates/tab-alert.html',
           controller: 'ChatsCtrl'
         }
       }
     })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
+    .state('tab.alert-detail', {
+      url: '/alert/:alertId',
       views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
+        'tab-alert': {
+          templateUrl: 'templates/alert-detail.html',
           controller: 'ChatDetailCtrl'
         }
       }
     })
 
-  .state('tab.account', {
-    url: '/account',
+  .state('tab.audit', {
+    url: '/audit',
     views: {
-      'tab-account': {
-        templateUrl: 'templates/tab-account.html',
+      'tab-audit': {
+        templateUrl: 'templates/tab-audit.html',
+        controller: 'AuditCtrl'
+      }
+    }
+  })
+
+  .state('tab.setting', {
+    url: '/setting',
+    views: {
+      'tab-setting': {
+        templateUrl: 'templates/tab-setting.html',
         controller: 'AccountCtrl'
       }
     }
