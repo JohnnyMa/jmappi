@@ -1,5 +1,5 @@
 # jmappi
-Ionic sample
+a sample mobile based on Ionic, support iOS and Android
 
 How to run?
 
