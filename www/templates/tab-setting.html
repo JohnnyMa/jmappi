@@ -1,9 +1,13 @@
-<ion-view view-title="Setting">
+<ion-view ng-controller="SettingCtrl" view-title="Setting">
   <ion-content>
     <ion-list>
     <ion-toggle  ng-model="settings.enableFriends">
         Setting
     </ion-toggle>
     </ion-list>
+    <br/>
+    <button class="button button-outline button-calm" ng-click="notifyMsg()">
+	  button-calm
+	</button>
   </ion-content>
 </ion-view>

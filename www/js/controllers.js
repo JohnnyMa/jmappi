@@ -27,6 +27,50 @@ angular.module('starter.controllers', [])
   };
 })
 
+.controller('SettingCtrl', function($scope) {
+  
+  $scope.data = {
+    showDelete: false
+  };
+
+  $scope.notifyMsg = function() {
+    var push = PushNotification.init({
+        android: {
+            senderID: "AIzaSyDo6dIdzFmvFp6ey8p33Mg78EtxICROLKc"
+        },
+        ios: {
+            alert: "true",
+            badge: "true",
+            sound: "true"
+        },
+        windows: {}
+    });
+
+    push.on('registration', function(data) {
+        // data.registrationId
+        alert('data.registrationId:' + data.registrationId);
+    });
+
+    push.on('notification', function(data) {
+        // data.message,
+        // data.title,
+        // data.count,
+        // data.sound,
+        // data.image,
+        // data.additionalData
+        alert('data.message: ' + data.message);
+
+    });
+
+    push.on('error', function(e) {
+        // e.message
+        alert(e,message);
+    });
+
+    alert('Generated a new notification.');
+  };
+})
+
 .controller('AuditCtrl', function($scope) {
   
   $scope.data = {
