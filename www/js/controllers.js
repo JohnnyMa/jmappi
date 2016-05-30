@@ -34,6 +34,7 @@ angular.module('starter.controllers', [])
   };
 
   $scope.notifyMsg = function() {
+    /*
     var push = PushNotification.init({
         android: {
             senderID: "AIzaSyDo6dIdzFmvFp6ey8p33Mg78EtxICROLKc"
@@ -66,6 +67,7 @@ angular.module('starter.controllers', [])
         // e.message
         alert(e,message);
     });
+    */
 
     alert('Generated a new notification.');
   };
